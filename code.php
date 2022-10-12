@@ -13,14 +13,14 @@ if(isset($_POST['save_student'])){
     // $dep = 'BCA';
 
 
-// if($name == NULL  || $lname == NULL || $fname==NULL || $dep == Null){
-//     $res = [
-//         "status"=>422,
-//         "message"=>"all fields are mondatory",
-//     ];
-//     echo json_encode($res);
-//     return;
-// }
+if($name == NULL  || $lname == NULL || $fname==NULL || $dep == Null){
+    $res = [
+        "status"=>422,
+        "message"=>"all fields are mondatory",
+    ];
+    echo json_encode($res);
+    return;
+}
     // $query = "INSERT INTO students(`name`, `lname`, `fname`, `dep`) VALUES('$name','$lname',$fname','$dep')";
 $query ="INSERT INTO `students` (`name`, `lname`, `fname`, `dep`) VALUES ('$name', '$lname', '$fname', '$dep')";
     // $query_run =;
